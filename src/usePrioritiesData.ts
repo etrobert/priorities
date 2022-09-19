@@ -3,7 +3,7 @@ import { collection, onSnapshot, query } from 'firebase/firestore';
 
 import firestore from './firestore';
 
-type Priority = { name: string; order: number };
+type Priority = { name: string; order: number; tags?: string[] };
 
 const q = query(collection(firestore, 'priorities'));
 

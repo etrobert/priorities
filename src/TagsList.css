@@ -1,0 +1,15 @@
+.TagsList__List {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: start;
+  justify-content: start;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.TagsList__Tag {
+  font-size: 1.1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.25);
+}

@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import TagsList from './TagsList';
 import usePrioritiesData from './usePrioritiesData';
 import './PrioritiesList.css';
 
@@ -16,6 +17,7 @@ const PrioritiesList = () => {
         : sortedPriorites.map((priority, index) => (
             <li className="PrioritiesList__Priority" key={priority.name}>
               {`${index + 1}. ${priority.name}`}
+              {priority.tags && <TagsList tags={priority.tags} />}
             </li>
           ))}
     </ol>
