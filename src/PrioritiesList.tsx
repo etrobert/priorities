@@ -15,7 +15,7 @@ const PrioritiesList = () => {
         ? 'Loading...'
         : sortedPriorites.map((priority) => (
             <li className="PrioritiesList__Priority" key={priority.name}>
-              {priority.name}
+              {`${priority.order}. ${priority.name}`}
             </li>
           ))}
     </ol>
