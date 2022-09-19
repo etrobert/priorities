@@ -1,15 +1,20 @@
+import usePrioritiesData from './usePrioritiesData';
 import './PrioritiesList.css';
 
-const mockData = ['Priority 1', 'Priority 2'];
+const PrioritiesList = () => {
+  const priorities = usePrioritiesData();
 
-const PrioritiesList = () => (
-  <ol className="PrioritiesList__List">
-    {mockData.map((priority) => (
-      <li className="PrioritiesList__Priority" key={priority}>
-        {priority}
-      </li>
-    ))}
-  </ol>
-);
+  return (
+    <ol className="PrioritiesList__List">
+      {priorities === undefined
+        ? 'Loading...'
+        : priorities.map((priority) => (
+            <li className="PrioritiesList__Priority" key={priority}>
+              {priority}
+            </li>
+          ))}
+    </ol>
+  );
+};
 
 export default PrioritiesList;
