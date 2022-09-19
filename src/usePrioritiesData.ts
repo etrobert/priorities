@@ -3,7 +3,7 @@ import { collection, onSnapshot, query } from 'firebase/firestore';
 
 import firestore from './firestore';
 
-type Priority = string;
+type Priority = { name: string; order: number };
 
 const q = query(collection(firestore, 'priorities'));
 
@@ -14,7 +14,7 @@ const usePrioritiesData = () => {
       onSnapshot(q, (querySnapshot) => {
         const priorities: Priority[] = [];
         querySnapshot.forEach((doc) => {
-          priorities.push(doc.data().name);
+          priorities.push(doc.data() as Priority);
         });
         setPriorities(priorities);
       }),
