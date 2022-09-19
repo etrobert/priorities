@@ -13,9 +13,9 @@ const PrioritiesList = () => {
     <ol className="PrioritiesList__List">
       {sortedPriorites === undefined
         ? 'Loading...'
-        : sortedPriorites.map((priority) => (
+        : sortedPriorites.map((priority, index) => (
             <li className="PrioritiesList__Priority" key={priority.name}>
-              {`${priority.order}. ${priority.name}`}
+              {`${index + 1}. ${priority.name}`}
             </li>
           ))}
     </ol>
