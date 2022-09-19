@@ -1,9 +1,13 @@
+import './PrioritiesList.css';
+
 const mockData = ['Priority 1', 'Priority 2'];
 
 const PrioritiesList = () => (
-  <ol>
+  <ol className="PrioritiesList__List">
     {mockData.map((priority) => (
-      <li key={priority}>{priority}</li>
+      <li className="PrioritiesList__Priority" key={priority}>
+        {priority}
+      </li>
     ))}
   </ol>
 );

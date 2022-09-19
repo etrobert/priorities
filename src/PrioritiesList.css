@@ -1,0 +1,12 @@
+.PrioritiesList__List {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.PrioritiesList__Priority {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
