@@ -14,6 +14,7 @@
     "firebase": "^9.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10",
     "react-scripts": "5.0.1",
     "typescript": "^4.8.3",
     "web-vitals": "^2.1.4"
@@ -41,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/feather-icons": "^4.7.0"
   }
 }
