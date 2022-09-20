@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { collection, onSnapshot, query } from 'firebase/firestore';
 
-import firestore from './firestore';
+import { firestore } from './firebase';
 
 type Priority = { name: string; order: number; tags?: string[] };
 
