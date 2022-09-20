@@ -28,7 +28,10 @@ const LogIn = () => {
         className="LogIn__Form"
         onSubmit={(event) => {
           event.preventDefault();
-          if (password === '') return;
+          if (password === '') {
+            setError('Error: Password is empty.');
+            return;
+          }
           signIn();
         }}
       >
